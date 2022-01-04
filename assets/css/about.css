@@ -1,0 +1,109 @@
+.lrbo-group > .wp-block-group__inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+.lrbo-group .lrbo-inner-group {
+    flex-basis: 30%;
+    border: 1px solid #707070;
+    padding: 60px 45px;
+    margin-bottom: 140px;
+}
+
+.lrbo-inner-group h2 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 80px;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.lrbo-inner-group .lrbo-intro__title {
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.lrbo-show {
+    background: #cbd200;
+    padding: 20px 20px;
+    width: 100%;
+}
+
+.lrbo-show h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 28px;
+    line-height: 43px;
+    text-transform: uppercase;
+}
+
+.lrbo-show ul {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 43px;
+}
+
+.lrbo-show ul strong {
+    color: #fff;
+}
+
+@media only screen 
+and (min-width : 768px) {
+
+    .lrbo-inner-group .lrbo-intro__title {
+        font-size: 28px;
+    }
+}
+
+@media only screen 
+and (min-width : 1024px) {
+
+    .lrbo-show h2 {
+        margin-bottom: 30px;
+        font-size: 40px;
+        line-height: 49px;
+    }
+
+    .lrbo-show {
+        padding: 20px 60px;
+        width: 65%;
+        box-shadow: 140px 80px 0px #DFE1E2;
+    }
+
+    .lrbo-show ul {
+        font-size: 20px;
+    }
+}
+
+@media only screen 
+and (min-width : 1200px) {
+}
+
+@media only screen 
+and (min-width : 1440px) {
+    .lrbo-group > .wp-block-group__inner-container {
+        flex-direction: row;
+    }
+
+    .lrbo-group .lrbo-inner-group:nth-child(2) {
+        transform: translateY(80px);
+    }
+
+    .lrbo-inner-group .lrbo-intro__title {
+        font-size: 18px;
+    }
+}
+
+@media only screen 
+and (min-width : 1800px) {
+
+    .lrbo-inner-group .lrbo-intro__title {
+        font-size: 28px;
+    }
+}
