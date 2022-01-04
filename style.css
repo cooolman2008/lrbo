@@ -1,0 +1,932 @@
+/*!
+Theme Name: Lrbo
+Author: Subrahmanya M
+Description: Custom Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: lrbo
+*/
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('./assets/fonts/HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('./assets/fonts/HelveticaNeue-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src: url('./assets/fonts/HelveticaNeue-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('./assets/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('./assets/fonts/Montserrat-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #DFE1E2;
+	scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+body {
+    background-image: url(./assets/images/Lrbo-watermerk-wit.png);
+    background-size: 32%;
+    background-repeat: no-repeat;
+    background-position: 100px 30px;
+}
+
+body::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+    background: #DFE1E2;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #C9D302;
+    outline: 1px solid #0f7b70;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 20px;
+    line-height: 43px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: -webkit-linear-gradient(
+-70deg, #a2facf 0%, #64acff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+}
+
+p {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 34px;
+    margin: auto ;
+}
+
+figcaption {
+    display: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lrbo-content {
+    width: 70%;
+    margin: auto;
+}
+
+.lrbo-content p {
+    margin-bottom: 45px;
+    line-height: 43px;
+}
+
+.lrbo-content a {
+    color: #1265EA;
+}
+
+.lrbo-content .link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.lrbo-content .link a {
+    font-family: Montserrat-Bold, sans-serif;
+    text-transform: uppercase;
+    padding: 12px 18px;
+    display: inline-block;
+    background: #C9D302;
+    color: #000;
+    border-radius: 12px;
+}
+
+.lrbo-content-img .wp-block-group__inner-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lrbo-content figure img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.lrbo-content ,.lrbo-ul {
+    margin-bottom: 40px;
+}
+
+.lrbo-content .lrbo-ul li {
+    position: relative;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 45px;
+    margin: auto;
+    text-align: left;
+    padding: 30px 50px;
+    background: #cbd200;
+    margin-bottom: 50px;
+}
+
+.lrbo-content .lrbo-ul li:nth-child(2n) {
+    background: #fff;
+    border: 1px solid #cbd200;
+}
+
+.lrbo-logo {
+    height: 45px;
+    display: inline-block;
+}
+
+.lrbo-logo-img {
+    max-height: 100%;
+}
+
+.lrbo-menu-icon span {
+    display: block;
+    border-radius: 5px;
+    height: 5px;
+    width: 40px;
+    margin-bottom: 5px;
+    background: #cbd200;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #DFE1E2;
+    align-items: center;
+}
+
+nav .lrbo-menu {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0;
+}
+
+nav .lrbo-menu li {
+    padding: 10px;
+}
+
+nav .lrbo-menu li a {
+    font-family: HelveticaNeue, sans-serif;;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 16px;
+}
+
+nav .sub-menu {
+    list-style: none;
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.15s ease;
+}
+
+nav .sub-menu-show {
+    max-height: 500px;
+    transition: all 0.5s ease;
+}
+
+nav .sub-menu li a {
+    font-family: Montserrat-Medium, sans-serif;
+    font-size: 11px;
+}
+
+nav.menu-show {
+    display: flex;
+}
+
+nav .lrbo-menu li a.lrbo-menu-active {
+    font-family: HelveticaNeue-Bold, sans-serif;
+    color: #C9D302;
+}
+
+.site-content {
+    padding-top: 100px; 
+}
+
+.lrbo-section {
+    background: #fff;
+    padding-top: 50px;
+}
+
+.lrbo-section-heading {
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.lrbo-section__title {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 32px;
+    line-height: 43px;
+    text-transform: uppercase;
+}
+
+.lrbo-section__bc {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.lrbo-section__bc .breadcrumb_last {
+    color: #0F7B6D;
+}
+
+.lrbo-section-content {
+    background-color: #fff;
+    border-top: 1px solid #574f4f;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.lrbo-intro, .lrbo-reference {
+    text-align: center;
+}
+
+.lrbo-intro__wrapper {
+    text-align: center;
+}
+
+.lrbo-intro__title {
+    font-family: Montserrat-Bold, sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    font-size: 24px;
+    line-height: 43px;
+    margin-bottom: 30px;
+}
+
+.lrbo-intro__title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 6px solid #cbd200;
+    left: 0;
+    top: -17px;
+    z-index: -1;
+}
+
+.lrbo-reference-slider-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.lrbo-reference-slider-list {
+    display: flex;
+    flex-basis: 85%;
+    overflow: hidden;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.lrbo-reference-slider {
+    flex-basis: 100%;
+    border: 1px solid #707070;
+    margin-top: 30px;
+}
+
+.lrbo-reference-slider:hover {
+    background: #C9D302;
+    transition: all 0.35s ease;
+}
+
+.lrbo-reference-slider__img {
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.lrbo-reference-slider__content {
+    padding: 30px 26px;
+    text-align: left;
+}
+
+.lrbo-reference-slider__tag {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 16px;
+    line-height: 43px;
+    text-transform: uppercase;
+    padding: 0px 8px;
+    display: inline-block;
+    background: #C9D302;
+    color: #fff;
+    margin: 0 auto 26px auto;
+}
+
+.lrbo-reference-slider__title {
+    font-family: Montserrat-Bold, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 43px;
+    margin-bottom: 10px;
+}
+
+.lrbo-reference-slider__desc p {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 34px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.lrbo-reference__link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #31312F;
+    border-radius: 5px;
+    margin-left: auto;
+    text-align: center;
+}
+
+.lrbo-reference__link svg {
+    transform: translateY(13px);
+    fill: #fff;
+}
+
+.lrbo-reference-slider__arrow {
+    width: 50px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.lrbo-reference-slider__prev svg {
+    transform: rotate(180deg);
+}
+
+footer {
+    background-image: url(./assets/images/Lrbo-watermerk-wit.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 100% 10%;
+}
+
+.lrbo-footer {
+    min-height: 600px;
+    position: relative;
+}
+
+.lrbo-footer-content {
+    padding: 60px 30px 90px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.lrbo-footer-content__text {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.lrbo-footer__address, .lrbo-footer__menu {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.lrbo-footer-contact {
+    margin-top: 40px;
+}
+
+.lrbo-footer-contact .wpcf7 input {
+    height: 40px;
+    margin-bottom: 6px;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 15px;
+    width: 100%;
+    
+}
+
+.lrbo-footer-contact .wpcf7 input::placeholder, .lrbo-footer-contact .wpcf7 textarea::placeholder {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.lrbo-footer-contact .wpcf7 textarea {
+    height: 160px;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.lrbo-footer-contact__title {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.lrbo-footer__cp {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 38px;
+}
+
+.lrbo-footer__cp p {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+@media only screen 
+   and (min-width : 768px) {
+
+    h3 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    body {
+        background-position: 140px 20px;
+    }
+
+    .site-content {
+        padding-top: 150px; 
+    }
+
+    .lrbo-section {
+        padding-top: 80px;
+    }
+
+    .lrbo-section-heading {
+        text-align: left;
+        width: 70%;
+        margin: auto;
+    }
+    
+    .lrbo-section__title {
+        font-size: 35px;
+        line-height: 55px;
+        margin: 30px 0;
+    }
+    
+    .lrbo-section__bc {
+        font-size: 20px;
+        line-height: 43px;
+        margin-top: 0;
+        margin-bottom: 45px;
+    }
+
+    .lrbo-intro__title {
+        font-size: 28px;
+        line-height: 43px;
+    }
+
+    header {
+        padding: 40px;
+    }
+
+    .lrbo-logo {
+        height: 65px;
+        display: inline-block;
+    }
+
+    nav .lrbo-menu li a {
+        font-size: 18px;
+    }
+
+    nav .sub-menu li a {
+        font-size: 14px;
+    }
+}
+
+@media only screen 
+   and (min-width : 1024px) {
+
+    h3 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    body {
+        background-size: 28%;
+        background-position: 135px 10px;
+    }
+
+    .site-content {
+        padding-top: 150px; 
+    }
+    
+    .lrbo-section__title {
+        font-size: 35px;
+        line-height: 55px;
+        margin: 20px 0;
+    }
+    
+    .lrbo-section__bc {
+        margin-top: 60px;
+    }
+
+    .lrbo-intro__title {
+        font-size: 32px;
+    }
+
+    #m_icon {
+        display: none;
+    }
+
+    nav {
+        display: inline-block;
+        position: unset;
+        background: unset;
+        align-items: unset;
+        flex-grow: 1;
+    }
+
+    nav .lrbo-menu li a {
+        font-size: 20px;
+    }
+
+    nav .sub-menu li a {
+        text-transform: unset;
+        font-size: 20px;
+    }
+
+    nav .lrbo-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav .sub-menu {
+        position: absolute;
+        background: white;
+        border-radius: 8px;
+        margin-top: 10px;
+        text-transform: unset;
+        box-shadow: 1px 5px 9px rgba(20, 19, 19, 0.16);
+    }
+
+    nav .sub-menu-show {
+        border: 1px solid #C9D302;
+    }
+
+    footer {
+        background-size: 30%;
+    }
+
+    .lrbo-footer-contact {
+        margin-top: 0;
+    }
+
+    .lrbo-footer-content {
+        flex-direction: row;
+    }
+
+    .lrbo-footer-content__text {
+        flex-direction: row;
+        flex-basis: 50%;
+    }
+}
+
+@media only screen 
+   and (min-width : 1200px) {
+
+    h3 {
+        font-size: 32px;
+        margin-top: 50px;
+    }
+
+    body {
+        background-position: 150px 5px;
+    }
+
+    .lrbo-section {
+        padding-top: 100px;
+    }
+    
+    .lrbo-section__title {
+        font-size: 42px;
+        margin: 55px 0;
+    }
+
+    .lrbo-intro__title {
+        font-size: 35px;
+    }
+
+    header {
+        padding: 60px 68px;
+    }
+
+    nav .lrbo-menu li {
+        margin-right: 20px;
+    }
+
+    .lrbo-content-img p {
+        flex-basis: 50%;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    
+    .lrbo-content-img figure {
+        flex-basis: 50%;
+    }
+
+    .lrbo-img__contents {
+        flex-basis: 50%;
+    }
+    
+    .lrbo-img__contents p {
+        flex-basis: unset;
+    }
+
+    .lrbo-img__img {
+        flex-basis: 50%;
+    }
+
+    .lrbo-img__img > .wp-block-group__inner-container {
+        height: 100%;
+    }
+    
+    .lrbo-img__img figure {
+        margin-top: 60px;
+        flex-basis: unset;
+    }
+
+    .lrbo-reference-slider {
+        flex-basis: 45%;
+    }
+
+    .lrbo-reference-slider__img  {
+        height: 300px;
+    }
+}
+
+@media only screen 
+   and (min-width : 1440px) {
+
+    h3 {
+        font-size: 35px;
+        margin-top: 60px;
+    }
+
+    body {
+        background-size: 20%;
+        background-position: 285px 80px;
+    }
+    
+    .lrbo-section__title {
+        font-size: 42px;
+        margin: 20px 0;
+    }
+    
+    .lrbo-section__bc {
+        margin-top: 20px;
+    }
+
+    .lrbo-intro__title {
+        font-size: 37px;
+    }
+
+    .lrbo-logo {
+        height: 125px;
+        display: inline-block;
+    }
+
+    .site-content {
+        padding-top: 252px;
+    }
+    
+    .lrbo-reference-slider__desc p {
+        width: 85%;
+    }
+
+    .lrbo-reference-slider__arrow {
+        width: 100px;
+        height: 110px;
+    }
+}
+
+@media only screen 
+   and (min-width : 1800px) {
+
+    h3 {
+        font-size: 37px;
+    }
+
+    body {
+        background-size: 22%;
+        background-position: 250px 40px;
+    }
+    
+    .lrbo-section__title {
+        font-size: 65px;
+        line-height: 79px;
+        margin: 60px 0;
+    }
+    
+    .lrbo-section__bc {
+        font-size: 20px;
+        line-height: 43px;
+        margin-top: 60px;
+        margin-bottom: 45px;
+    }
+
+    .lrbo-content .lrbo-ul li {
+        position: relative;
+        font-family: HelveticaNeue, sans-serif;
+        font-size: 37px;
+        line-height: 45px;
+        margin: auto;
+        text-align: left;
+        padding: 30px 50px;
+        background: #cbd200;
+        height: 200px;
+        padding-left: 240px;
+        margin-bottom: 50px;
+    }
+    
+    .lrbo-content .lrbo-ul li strong {
+        width: 240px;
+        display: inline-block;
+        position: absolute;
+        font-size: 120px;
+        left: 75px;
+        top: 65px;
+    }
+    
+    .lrbo-content .lrbo-ul li:nth-child(2n) {
+        background: #fff;
+        border: 1px solid #cbd200;
+    }
+
+    .lrbo-intro__title {
+        font-size: 40px;
+        line-height: 49px;
+        margin-bottom: 50px;
+    }
+
+    .lrbo-intro__title::after {
+        border-bottom: 10px solid #cbd200;
+        top: -15px;
+    }
+    
+    .lrbo-reference-slider {
+        flex-basis: 28%;
+    }
+    
+    .lrbo-reference-slider__tag {
+        margin-top: 36px;
+    }
+    
+    .lrbo-reference-slider__title {
+        margin-bottom: 36px;
+    }
+
+    footer {
+        background-image: url(./assets/images/Lrbo-watermerk-wit.png);
+        background-size: 27%;
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+    }
+    
+    .lrbo-footer {
+        min-height: 600px;
+        position: relative;
+    }
+    
+    .lrbo-footer-content {
+        padding: 60px 30px 90px 30px;
+    }
+    
+    .lrbo-footer__address, .lrbo-footer__menu {
+        font-family: HelveticaNeue, sans-serif;
+        font-size: 20px;
+        line-height: 35px;
+        margin: 0;
+        margin-top: 40px;
+    }
+    
+    .lrbo-footer-contact .wpcf7 input {
+        height: 40px;
+        margin-bottom: 6px;
+        font-family: HelveticaNeue, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 15px;
+    }
+    
+    .lrbo-footer-contact .wpcf7 input::placeholder, .lrbo-footer-contact .wpcf7 textarea::placeholder {
+        font-family: HelveticaNeue, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .lrbo-footer-contact .wpcf7 textarea {
+        height: 160px;
+        font-family: HelveticaNeue, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 15px;
+        width: 100%;
+    }
+    
+    .lrbo-footer-contact__title {
+        font-family: Montserrat-Bold, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    
+    .lrbo-footer__cp {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 38px;
+    }
+    
+    .lrbo-footer__cp p {
+        font-family: HelveticaNeue, sans-serif;
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
