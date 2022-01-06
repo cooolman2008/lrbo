@@ -56,7 +56,7 @@
     border: 1px solid #D9DEEA;
     padding-left: 20px;
     margin-bottom: 28px;
-    font-family: HelveticaNeue, sans-serif;
+    font-family: Kone, sans-serif;
     font-size: 20px;
     line-height: 24px;
 }
@@ -177,7 +177,7 @@ and (min-width : 1024px) {
         border: 1px solid #D9DEEA;
         padding-left: 20px;
         margin-bottom: 28px;
-        font-family: HelveticaNeue, sans-serif;
+        font-family: Kone, sans-serif;
         font-size: 20px;
         line-height: 24px;
     }

@@ -7,16 +7,17 @@ function clean_custom_menu( $menu_name ) {
  
         $count = 0;
         $submenu = false;
-         
+
         foreach( $menu_items as $menu_item ) {
-             
+
             $link = $menu_item->url;
             $title = $menu_item->title;
-             
+
             if ( !$menu_item->menu_item_parent ) {
                 $parent_id = $menu_item->ID;
+                $active = ($count == 0) ? "active" : "";
                  
-                $menu_list .= '<li class="item">' ."\n";
+                $menu_list .= '<li class="item '.$active.'">' ."\n";
                 $menu_list .= '<a href="'.$link.'" class="title">'.$title.'</a>' ."\n";
             }
  
@@ -29,8 +30,7 @@ function clean_custom_menu( $menu_name ) {
  
                 $menu_list .= '<li class="item">' ."\n";
                 $menu_list .= '<a href="'.$link.'" class="title">'.$title.'</a>' ."\n";
-                $menu_list .= '</li>' ."\n";
-                     
+                $menu_list .= '</li>' ."\n";                     
  
                 if ( $menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ){
                     $menu_list .= '</ul>' ."\n";
@@ -46,7 +46,7 @@ function clean_custom_menu( $menu_name ) {
  
             $count++;
         }
-         
+
         $menu_list .= '</ul>' ."\n";
  
     } else {

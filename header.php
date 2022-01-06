@@ -41,7 +41,7 @@
 <header class="lrbo-head">
     <div class="lrbo-logo">
         <a href="/">
-            <img class="lrbo-logo-img" src="<?php echo LRBO_THEME_URI?>/assets/images/Lrbo-Logo.png" alt="Lrbo logo" />
+            <img class="lrbo-logo-img" src="<?php echo LRBO_THEME_URI?>/assets/images/lrbo-logo-final.png" alt="Lrbo logo" />
         </a>
     </div>
     <div class="lrbo-menu-icon" id="m_icon">
