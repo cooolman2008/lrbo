@@ -124,7 +124,7 @@ header {
 
 .lrbo-logo-img {
     max-height: 100%;
-    filter: drop-shadow(1px 0px 0px rgba(0,0,0,0.25));
+    filter: drop-shadow(1px 0px 0px rgba(0,0,0,0.15));
 }
 
 .lrbo-menu-icon {
@@ -212,16 +212,33 @@ nav .lrbo-menu li a.lrbo-menu-active {
 }
 
 .lrbo-title h1 {
+    margin-top: 60px;
     font-size: 32px;
     font-family: 'Kone', sans-serif;
-    color: #8e6caf;
+    color: #FDAB5F;
     text-shadow: 1px 0px 0px rgb(0 0 0 / 25%);
 }
 
+.lrbo-title h2:first-of-type {
+    margin-top: 35px;
+}
+
+.lrbo-title h2 {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Indie', sans-serif;
+    color: #5FB1FD;
+    text-shadow: 1px 0px 0px rgb(0 0 0 / 25%);
+}
+
+.lrbo-title p:first-of-type {
+    margin-top: 20px;
+}
+
 .lrbo-title p {
+    width: 90%;
     font-family: 'Indie', sans-serif;
     color: #8e6caf;
-    margin-top: 40px;
     text-shadow: 1px 0px 0px rgb(0 0 0 / 25%);
 }
 
@@ -324,21 +341,7 @@ nav .lrbo-menu li a.lrbo-menu-active {
     transform: rotate(180deg);
 }
 
-footer {
-    background-image: url(./assets/images/Lrbo-watermerk-wit.png);
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: 100% 10%;
-}
-
-.lrbo-footer {
-    min-height: 600px;
-    position: relative;
-}
-
 .lrbo-footer__cp {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     text-align: center;
     padding-bottom: 38px;
@@ -349,6 +352,12 @@ footer {
     font-size: 20px;
     line-height: 23px;
     color: #8E6CAF;
+}
+
+.lrbo-footer__social svg {
+    width: 100px;
+    height: auto;
+    display: inline;
 }
 
 @media only screen 
