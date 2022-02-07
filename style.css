@@ -51,6 +51,7 @@ body {
     background: #fff;
 	scroll-behavior: smooth;
     min-height: 100vh;
+    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('assets/images/bg2.png');
 }
 
 body::-webkit-scrollbar {
@@ -106,16 +107,6 @@ header {
     justify-content: space-between;
 }
 
-.lrbo-content {
-    width: 70%;
-    margin: auto;
-}
-
-.lrbo-content p {
-    margin-bottom: 45px;
-    line-height: 43px;
-}
-
 .lrbo-logo {
     height: 92px;
     display: inline-block;
@@ -124,7 +115,7 @@ header {
 
 .lrbo-logo-img {
     max-height: 100%;
-    filter: drop-shadow(1px 0px 0px rgba(0,0,0,0.15));
+    filter: drop-shadow(1px 0px 0px rgba(0,0,0,0.25));
 }
 
 .lrbo-menu-icon {
@@ -154,8 +145,9 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #fff;
     align-items: center;
+    background: #fff;
+    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('assets/images/bg.png');
 }
 
 nav .lrbo-menu {
@@ -174,37 +166,19 @@ nav .lrbo-menu li a {
     text-transform: uppercase;
     color: #FDAB5F;
     font-size: 28px;
+    font-weight: bold;
+    transition: color 0.25s ease;
+    text-shadow: 1px 0px 1px rgb(0 0 0 / 25%);
 }
 
 nav .lrbo-menu li.active a {
     color: #8E6CAF;
-}
-
-nav .sub-menu {
-    list-style: none;
-    padding: 0;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.15s ease;
-}
-
-nav .sub-menu-show {
-    max-height: 500px;
-    transition: all 0.5s ease;
-}
-
-nav .sub-menu li a {
-    font-family: Montserrat-Medium, sans-serif;
-    font-size: 11px;
+    font-weight: 100;
+    transition: color 0.25s ease;
 }
 
 nav.menu-show {
     display: flex;
-}
-
-nav .lrbo-menu li a.lrbo-menu-active {
-    font-family: Kone-Bold, sans-serif;
-    color: #C9D302;
 }
 
 .lrbo-title {
@@ -213,10 +187,11 @@ nav .lrbo-menu li a.lrbo-menu-active {
 
 .lrbo-title h1 {
     margin-top: 60px;
-    font-size: 32px;
-    font-family: 'Kone', sans-serif;
+    font-size: 50px;
+    font-family: 'CurlzMT', sans-serif;
+    font-weight: 300;
     color: #FDAB5F;
-    text-shadow: 1px 0px 0px rgb(0 0 0 / 25%);
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
 }
 
 .lrbo-title h2:first-of-type {
@@ -228,7 +203,7 @@ nav .lrbo-menu li a.lrbo-menu-active {
     font-weight: normal;
     font-family: 'Indie', sans-serif;
     color: #5FB1FD;
-    text-shadow: 1px 0px 0px rgb(0 0 0 / 25%);
+    text-shadow: 1px 0px 1px rgb(0 0 0 / 25%);
 }
 
 .lrbo-title p:first-of-type {
@@ -239,7 +214,7 @@ nav .lrbo-menu li a.lrbo-menu-active {
     width: 90%;
     font-family: 'Indie', sans-serif;
     color: #8e6caf;
-    text-shadow: 1px 0px 0px rgb(0 0 0 / 25%);
+    text-shadow: 0px 0px 1px rgb(0 0 0 / 25%);
 }
 
 .site-content {
@@ -247,98 +222,7 @@ nav .lrbo-menu li a.lrbo-menu-active {
 }
 
 .lrbo-section {
-    background: #fff;
     padding-top: 50px;
-}
-
-.lrbo-reference-slider-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.lrbo-reference-slider-list {
-    display: flex;
-    flex-basis: 85%;
-    overflow: hidden;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.lrbo-reference-slider {
-    flex-basis: 100%;
-    border: 1px solid #707070;
-    margin-top: 30px;
-}
-
-.lrbo-reference-slider:hover {
-    background: #C9D302;
-    transition: all 0.35s ease;
-}
-
-.lrbo-reference-slider__img {
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-}
-
-.lrbo-reference-slider__content {
-    padding: 30px 26px;
-    text-align: left;
-}
-
-.lrbo-reference-slider__tag {
-    font-family: Kone, sans-serif;
-    font-size: 16px;
-    line-height: 43px;
-    text-transform: uppercase;
-    padding: 0px 8px;
-    display: inline-block;
-    background: #C9D302;
-    color: #fff;
-    margin: 0 auto 26px auto;
-}
-
-.lrbo-reference-slider__title {
-    font-family: Montserrat-Bold, sans-serif;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 43px;
-    margin-bottom: 10px;
-}
-
-.lrbo-reference-slider__desc p {
-    font-family: Kone, sans-serif;
-    font-size: 20px;
-    line-height: 34px;
-    margin: 0;
-    margin-bottom: 20px;
-}
-
-.lrbo-reference__link {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: #31312F;
-    border-radius: 5px;
-    margin-left: auto;
-    text-align: center;
-}
-
-.lrbo-reference__link svg {
-    transform: translateY(13px);
-    fill: #fff;
-}
-
-.lrbo-reference-slider__arrow {
-    width: 50px;
-    height: 55px;
-    cursor: pointer;
-}
-
-.lrbo-reference-slider__prev svg {
-    transform: rotate(180deg);
 }
 
 .lrbo-footer__cp {
@@ -354,54 +238,25 @@ nav .lrbo-menu li a.lrbo-menu-active {
     color: #8E6CAF;
 }
 
+.lrbo-footer__social {
+    text-align: center;
+}
+
 .lrbo-footer__social svg {
     width: 100px;
     height: auto;
     display: inline;
 }
 
+footer {
+    padding-top: 60px;
+}
+
 @media only screen 
    and (min-width : 768px) {
 
-    h3 {
-        font-size: 24px;
-        margin-top: 30px;
-    }
-
-    body {
-        background-position: 140px 20px;
-    }
-
-    .site-content {
-        padding-top: 150px; 
-    }
-
     .lrbo-section {
         padding-top: 80px;
-    }
-
-    .lrbo-section-heading {
-        text-align: left;
-        width: 70%;
-        margin: auto;
-    }
-    
-    .lrbo-section__title {
-        font-size: 35px;
-        line-height: 55px;
-        margin: 30px 0;
-    }
-    
-    .lrbo-section__bc {
-        font-size: 20px;
-        line-height: 43px;
-        margin-top: 0;
-        margin-bottom: 45px;
-    }
-
-    .lrbo-intro__title {
-        font-size: 28px;
-        line-height: 43px;
     }
 
     header {
@@ -416,41 +271,13 @@ nav .lrbo-menu li a.lrbo-menu-active {
     nav .lrbo-menu li a {
         font-size: 18px;
     }
-
-    nav .sub-menu li a {
-        font-size: 14px;
-    }
 }
 
 @media only screen 
    and (min-width : 1024px) {
 
-    h3 {
-        font-size: 28px;
-        margin-top: 40px;
-    }
-
-    body {
-        background-size: 28%;
-        background-position: 135px 10px;
-    }
-
     .site-content {
         padding-top: 150px; 
-    }
-    
-    .lrbo-section__title {
-        font-size: 35px;
-        line-height: 55px;
-        margin: 20px 0;
-    }
-    
-    .lrbo-section__bc {
-        margin-top: 60px;
-    }
-
-    .lrbo-intro__title {
-        font-size: 32px;
     }
 
     #m_icon {
@@ -469,145 +296,34 @@ nav .lrbo-menu li a.lrbo-menu-active {
         font-size: 20px;
     }
 
-    nav .sub-menu li a {
-        text-transform: unset;
-        font-size: 20px;
-    }
-
     nav .lrbo-menu {
         display: flex;
         justify-content: flex-end;
-    }
-
-    nav .sub-menu {
-        position: absolute;
-        background: white;
-        border-radius: 8px;
-        margin-top: 10px;
-        text-transform: unset;
-        box-shadow: 1px 5px 9px rgba(20, 19, 19, 0.16);
-    }
-
-    nav .sub-menu-show {
-        border: 1px solid #C9D302;
-    }
-
-    footer {
-        background-size: 30%;
-    }
-
-    .lrbo-footer-contact {
-        margin-top: 0;
-    }
-
-    .lrbo-footer-content {
-        flex-direction: row;
-    }
-
-    .lrbo-footer-content__text {
-        flex-direction: row;
-        flex-basis: 50%;
     }
 }
 
 @media only screen 
    and (min-width : 1200px) {
 
-    h3 {
-        font-size: 32px;
-        margin-top: 50px;
-    }
-
-    body {
-        background-position: 150px 5px;
+    p {
+        line-height: 50px;
     }
 
     .lrbo-section {
         padding-top: 100px;
     }
-    
-    .lrbo-section__title {
-        font-size: 42px;
-        margin: 55px 0;
-    }
-
-    .lrbo-intro__title {
-        font-size: 35px;
-    }
 
     header {
-        padding: 60px 68px;
+        padding: 30px 68px;
     }
 
     nav .lrbo-menu li {
         margin-right: 20px;
     }
-
-    .lrbo-content-img p {
-        flex-basis: 50%;
-        margin: auto;
-        margin-bottom: 0;
-    }
-    
-    .lrbo-content-img figure {
-        flex-basis: 50%;
-    }
-
-    .lrbo-img__contents {
-        flex-basis: 50%;
-    }
-    
-    .lrbo-img__contents p {
-        flex-basis: unset;
-    }
-
-    .lrbo-img__img {
-        flex-basis: 50%;
-    }
-
-    .lrbo-img__img > .wp-block-group__inner-container {
-        height: 100%;
-    }
-    
-    .lrbo-img__img figure {
-        margin-top: 60px;
-        flex-basis: unset;
-    }
-
-    .lrbo-reference-slider {
-        flex-basis: 45%;
-    }
-
-    .lrbo-reference-slider__img  {
-        height: 300px;
-    }
 }
 
 @media only screen 
    and (min-width : 1440px) {
-
-    h3 {
-        font-size: 35px;
-        margin-top: 60px;
-    }
-
-    body {
-        background-size: 20%;
-        background-position: 285px 80px;
-    }
-    
-    .lrbo-section__title {
-        font-size: 42px;
-        margin: 20px 0;
-    }
-    
-    .lrbo-section__bc {
-        margin-top: 20px;
-    }
-
-    .lrbo-intro__title {
-        font-size: 37px;
-    }
 
     .lrbo-logo {
         height: 125px;
@@ -617,152 +333,12 @@ nav .lrbo-menu li a.lrbo-menu-active {
     .site-content {
         padding-top: 252px;
     }
-    
-    .lrbo-reference-slider__desc p {
-        width: 85%;
-    }
-
-    .lrbo-reference-slider__arrow {
-        width: 100px;
-        height: 110px;
-    }
 }
 
 @media only screen 
    and (min-width : 1800px) {
-
-    h3 {
-        font-size: 37px;
-    }
-
-    body {
-        background-size: 22%;
-        background-position: 250px 40px;
-    }
-    
-    .lrbo-section__title {
-        font-size: 65px;
-        line-height: 79px;
-        margin: 60px 0;
-    }
-    
-    .lrbo-section__bc {
-        font-size: 20px;
-        line-height: 43px;
-        margin-top: 60px;
-        margin-bottom: 45px;
-    }
-
-    .lrbo-content .lrbo-ul li {
-        position: relative;
-        font-family: Kone, sans-serif;
-        font-size: 37px;
-        line-height: 45px;
-        margin: auto;
-        text-align: left;
-        padding: 30px 50px;
-        background: #cbd200;
-        height: 200px;
-        padding-left: 240px;
-        margin-bottom: 50px;
-    }
-    
-    .lrbo-content .lrbo-ul li strong {
-        width: 240px;
-        display: inline-block;
-        position: absolute;
-        font-size: 120px;
-        left: 75px;
-        top: 65px;
-    }
-    
-    .lrbo-content .lrbo-ul li:nth-child(2n) {
-        background: #fff;
-        border: 1px solid #cbd200;
-    }
-
-    .lrbo-intro__title {
-        font-size: 40px;
-        line-height: 49px;
-        margin-bottom: 50px;
-    }
-
-    .lrbo-intro__title::after {
-        border-bottom: 10px solid #cbd200;
-        top: -15px;
-    }
-    
-    .lrbo-reference-slider {
-        flex-basis: 28%;
-    }
-    
-    .lrbo-reference-slider__tag {
-        margin-top: 36px;
-    }
-    
-    .lrbo-reference-slider__title {
-        margin-bottom: 36px;
-    }
-
-    footer {
-        background-image: url(./assets/images/Lrbo-watermerk-wit.png);
-        background-size: 27%;
-        background-repeat: no-repeat;
-        background-position: 100% 0%;
-    }
-    
-    .lrbo-footer {
-        min-height: 600px;
-        position: relative;
-    }
-    
-    .lrbo-footer-content {
-        padding: 60px 30px 90px 30px;
-    }
-    
-    .lrbo-footer__address, .lrbo-footer__menu {
-        font-family: Kone, sans-serif;
-        font-size: 20px;
-        line-height: 35px;
-        margin: 0;
-        margin-top: 40px;
-    }
-    
-    .lrbo-footer-contact .wpcf7 input {
-        height: 40px;
-        margin-bottom: 6px;
-        font-family: Kone, sans-serif;
-        font-size: 20px;
-        line-height: 24px;
-        padding-left: 15px;
-    }
-    
-    .lrbo-footer-contact .wpcf7 input::placeholder, .lrbo-footer-contact .wpcf7 textarea::placeholder {
-        font-family: Kone, sans-serif;
-        font-size: 20px;
-        line-height: 24px;
-    }
-    
-    .lrbo-footer-contact .wpcf7 textarea {
-        height: 160px;
-        font-family: Kone, sans-serif;
-        font-size: 20px;
-        line-height: 24px;
-        padding-left: 15px;
-        width: 100%;
-    }
-    
-    .lrbo-footer-contact__title {
-        font-family: Montserrat-Bold, sans-serif;
-        font-size: 20px;
-        line-height: 24px;
-        margin: 0;
-        margin-bottom: 20px;
-    }
     
     .lrbo-footer__cp {
-        position: absolute;
-        bottom: 0;
         width: 100%;
         text-align: center;
         padding-bottom: 38px;
@@ -772,5 +348,21 @@ nav .lrbo-menu li a.lrbo-menu-active {
         font-family: Kone, sans-serif;
         font-size: 20px;
         line-height: 23px;
+    }
+
+    .lrbo-title h1 {
+        font-size: 70px;
+    }
+    
+    .lrbo-title h2 {
+        font-size: 36px;
+    }
+    
+    .lrbo-title p {
+        font-size: 32px;
+    }
+
+    nav .lrbo-menu li a {
+        font-size: 32px;
     }
 }
